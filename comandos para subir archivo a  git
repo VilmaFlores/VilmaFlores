@@ -1,0 +1,111 @@
+vilma@pop-os:~/Escritorio/Programar$ ls
+ ejemplo2.html  'piedra, papel tijera2..html'
+ pagina.html    'piedra papel tijera.html'
+vilma@pop-os:~/Escritorio/Programar$ git init
+ayuda: Usando 'master' como el nombre de la rama inicial. Este nombre de rama predeterminado
+ayuda: está sujeto a cambios. Para configurar el nombre de la rama inicial para usar en todos
+ayuda: de sus nuevos repositorios, reprimiendo esta advertencia, llama a:
+ayuda: 
+ayuda: 	git config --global init.defaultBranch <nombre>
+ayuda: 
+ayuda: Los nombres comúnmente elegidos en lugar de 'master' son 'main', 'trunk' y
+ayuda: 'development'. Se puede cambiar el nombre de la rama recién creada mediante este comando:
+ayuda: 
+ayuda: 	git branch -m <nombre>
+Inicializado repositorio Git vacío en /home/vilma/Escritorio/Programar/.git/
+vilma@pop-os:~/Escritorio/Programar$ git add .
+vilma@pop-os:~/Escritorio/Programar$ git commit -m "primer commit"
+[master (commit-raíz) 5ad5723] primer commit
+ 4 files changed, 128 insertions(+)
+ create mode 100644 ejemplo2.html
+ create mode 100644 pagina.html
+ create mode 100644 piedra papel tijera.html
+ create mode 100644 piedra, papel tijera2..html
+vilma@pop-os:~/Escritorio/Programar$ git branch
+* master
+vilma@pop-os:~/Escritorio/Programar$ git branch -M main
+vilma@pop-os:~/Escritorio/Programar$ git branch
+* main
+vilma@pop-os:~/Escritorio/Programar$ git remote add origin https://github.com/VilmaFlores/VilmaFlores.git
+vilma@pop-os:~/Escritorio/Programar$ git push -u origin main
+Username for 'https://github.com': vilmis2130@gmail.com
+Password for 'https://vilmis2130@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Autenticación falló para 'https://github.com/VilmaFlores/VilmaFlores.git/'
+vilma@pop-os:~/Escritorio/Programar$ git remote add origin git@github.com:VilmaFlores/VilmaFlores.git
+error: remoto origin ya existe.
+vilma@pop-os:~/Escritorio/Programar$ git remote set-url origin git@github.com:VilmaFlores/VilmaFlores.git
+vilma@pop-os:~/Escritorio/Programar$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/vilma/.ssh/id_rsa): 
+Created directory '/home/vilma/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/vilma/.ssh/id_rsa
+Your public key has been saved in /home/vilma/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:NDaQOjgzzTB+C41YqKUWVRhYg+X2jqq8gHOC4LhxpUM vilma@pop-os
+The key's randomart image is:
++---[RSA 3072]----+
+| .**+...         |
+|.+*.. ..         |
+|.*.@ .  =        |
+|+.X O  o o       |
+|o E*.+  S        |
+|*. o+            |
+|O.=. .           |
+|oB..             |
+|++.              |
++----[SHA256]-----+
+vilma@pop-os:~/Escritorio/Programar$ cat /home/vilma/.ssh/id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIWiuCaJJ0tE3I62AIhbE3dAonCzYgPeYqFAHg1stDO9zf3is3feMerZ6rUC2vXj/6DikcU1My1blANFbD8/nSMbKet/ErYroo/p1Kgpwh//5gACFDIkVhehdB48stTn4Lp5qz0tajoMfufOOqWecLxuYtR1efwOgcIN7RF/PE6eJ9vTm6YFiNCmswhU0SPB574FX4FlWzy2WUkfJxNgn/m0FvNftLeiM8g1VeGvszeZ4J37e6nWuhaYPx4vChNp/85G3mnqWJ7FfBK94LPQTaAuGN3n4as1bL73Q/2W8d7McKH23I6bSBXi9+zAfBU1U5TCZl4Bsm5Hj3ZgwVocokIDcUoh61BvwpSJY/vyDduceuskDYkpoNtWrZXXk9HiRylWXM70Wy+tjW1ck5EK5rjMwDX23yBSlr5GTL/+TexuK3mQoxh9VQCgrC5yw8uLT+Z4ESW4qzXWt7nDg63EfJIHblWceFyOykBNnWi4x8UEQTdQf9CrXaNQgTNn/vRa8= vilma@pop-os
+vilma@pop-os:~/Escritorio/Programar$ ^C
+vilma@pop-os:~/Escritorio/Programar$ git push -u origin main
+The authenticity of host 'github.com (140.82.113.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerando objetos: 6, listo.
+Contando objetos: 100% (6/6), listo.
+Compresión delta usando hasta 4 hilos
+Comprimiendo objetos: 100% (6/6), listo.
+Escribiendo objetos: 100% (6/6), 1.30 KiB | 1.30 MiB/s, listo.
+Total 6 (delta 1), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:VilmaFlores/VilmaFlores.git
+ * [new branch]      main -> main
+Rama 'main' configurada para hacer seguimiento a la rama remota 'main' de 'origin'.
+vilma@pop-os:~/Escritorio/Programar$ git status
+En la rama main
+Tu rama está actualizada con 'origin/main'.
+
+nada para hacer commit, el árbol de trabajo está limpio
+vilma@pop-os:~/Escritorio/Programar$ git status
+En la rama main
+Tu rama está actualizada con 'origin/main'.
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	modificados:     piedra, papel tijera2..html
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+vilma@pop-os:~/Escritorio/Programar$ git diff
+diff --git a/piedra, papel tijera2..html b/piedra, papel tijera2..html
+index 084095f..9186ff5 100644
+--- a/piedra, papel tijera2..html       
++++ b/piedra, papel tijera2..html       
+@@ -14,7 +14,7 @@
+             let pc=aleatorio(1,3)
+             jugador=prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera")
+             //alert("Elegiste " + jugador)
+-            if(jugador==1){
++           // if(jugador==1){
+                 alert("Elegiste piedra")
+             }else if(jugador==2){
+                 alert("Elegiste papel")
+vilma@pop-os:~/Escritorio/Programar$ git remote add origin git@github.com:VilmaFlores/VilmaFlores.git
+
+
