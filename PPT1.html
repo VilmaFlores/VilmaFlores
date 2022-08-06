@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> PPT</title>
+        <script>
+            function aleatorio (min, max){
+               return Math.floor(Math.random() * (max - min + 1) + min)
+               
+            }
+            //Math.floor() quita decimales
+            //Math.random() número aleatorio
+
+            function eleccion(jugada){
+                let resultado = ""
+                if(jugada == 1){
+                    resultado = "Piedra"
+                }else if(jugada == 2){
+                    resultado = "Papel"
+                }else if(jugada == 3){
+                    resultado = "Tijera"
+                }else{
+                    resultado = "FUERA DE RANGO"
+                }
+                return resultado
+            }
+
+            let jugador = 0   //declara variables
+            let pc = aleatorio(1,3)
+            jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera") //permite ingresar datos
+            alert ("PC elige: " + eleccion(pc))
+            alert ("Elegiste: " + eleccion(jugador))
+            
+            if(pc == jugador){
+                alert("Empate") 
+            }else if(jugador == 1 && pc == 3){
+                alert("Ganaste")
+            }else if(jugador == 2 && pc == 1){
+                alert("Ganaste")
+            }else if(jugador == 3 && pc == 2){
+                alert("Ganaste")
+            }else{
+                alert ("perdiste")
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
