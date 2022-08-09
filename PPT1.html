@@ -25,11 +25,12 @@
                 return resultado
             }
 
-            let jugador = 0   //declara variables
+            let jugador = 0                             //declara variables
             let pc = aleatorio(1,3)
-            jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera") //permite ingresar datos
-            alert ("PC elige: " + eleccion(pc))
+            jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera")  //permite ingresar datos
+            
             alert ("Elegiste: " + eleccion(jugador))
+            alert ("PC elige: " + eleccion(pc))
             
             if(pc == jugador){
                 alert("Empate") 
